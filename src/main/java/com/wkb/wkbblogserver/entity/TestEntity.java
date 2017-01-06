@@ -3,17 +3,10 @@ package com.wkb.wkbblogserver.entity;
 /**
  * Created by 79987 on 2017/1/5.
  */
-public class TestEntity {
+public class TestEntity extends BaseEntity{
 
-    private Integer id;
     private String name;
     private Integer age;
-    public Integer getId() {
-        return id;
-    }
-    public void setId(Integer id) {
-        this.id = id;
-    }
     public String getName() {
         return name;
     }
