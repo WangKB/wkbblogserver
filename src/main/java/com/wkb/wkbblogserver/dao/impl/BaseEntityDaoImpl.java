@@ -7,18 +7,7 @@ import com.wkb.wkbblogserver.entity.BaseEntity;
 /**
  * Created by Administrator on 2017/1/6.
  */
-public class BaseEntityDaoImpl<T extends BaseEntity> implements BaseEntityDao<T>{
+public class BaseEntityDaoImpl<T extends BaseEntity>{
 
-    private BaseSqlBuilder baseSqlBuilder;
 
-    @Override
-    public T find(Long id) {
-        return null;
-    }
-
-    @Override
-    public T save(T obj) {
-        baseSqlBuilder.selectById(obj.getClass());
-        return null;
-    }
 }

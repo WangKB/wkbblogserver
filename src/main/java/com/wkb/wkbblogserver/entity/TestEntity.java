@@ -1,8 +1,11 @@
 package com.wkb.wkbblogserver.entity;
 
+import javax.persistence.Table;
+
 /**
  * Created by 79987 on 2017/1/5.
  */
+@Table(name = "user")
 public class TestEntity extends BaseEntity{
 
     private String name;

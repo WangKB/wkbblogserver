@@ -13,12 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value="/home")
 public class TestController {
 
-    @Autowired
-    BaseEntityDao userMapper;
-    @RequestMapping(value = "/user")
-    public String user(){
-        TestEntity user = userMapper.findUserByName("王二");
-        return user.getName()+"-----"+user.getAge();
-    }
+
 
 }
