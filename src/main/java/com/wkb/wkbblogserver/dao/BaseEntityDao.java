@@ -19,13 +19,13 @@ public interface BaseEntityDao<T extends BaseEntity> {
     @SelectProvider(type = BaseSqlBuilder.class,method = "selectById")
     T find(Long id,T obj);
 
-    @InsertProvider(type = BaseSqlBuilder.class,method = "selectById")
+    @InsertProvider(type = BaseSqlBuilder.class,method = "insert")
     T save(T obj);
 
-    @UpdateProvider(type = BaseSqlBuilder.class,method = "selectById")
+    @UpdateProvider(type = BaseSqlBuilder.class,method = "update")
     T update(T obj);
 
-    @DeleteProvider(type = BaseSqlBuilder.class,method = "selectById")
+    @DeleteProvider(type = BaseSqlBuilder.class,method = "delete")
     void delete(T obj);
 
 }

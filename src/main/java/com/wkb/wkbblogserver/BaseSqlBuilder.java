@@ -19,4 +19,22 @@ public class BaseSqlBuilder {
             FROM(obj.getClass().getAnnotation(Table.class).name());
         }}.toString();
     }
+
+    public String insert(BaseEntity obj){
+        return new SQL(){{
+
+        }}.toString();
+    }
+
+    public String update(BaseEntity obj){
+        return new SQL(){{
+
+        }}.toString();
+    }
+
+    public String delete(BaseEntity obj){
+        return new SQL(){{
+
+        }}.toString();
+    }
 }
