@@ -1,6 +1,6 @@
 spring:
     datasource:
-        name: test
+        name: parttimejob
         url: jdbc:mysql://120.24.19.237:3306/parttimejob?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
         username: parttimejob
         password: puyuntech
