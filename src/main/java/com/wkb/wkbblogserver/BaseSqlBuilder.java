@@ -4,6 +4,7 @@ import com.wkb.wkbblogserver.entity.BaseEntity;
 
 import org.apache.ibatis.jdbc.SQL;
 
+import javax.persistence.Column;
 import javax.persistence.Table;
 
 ;
@@ -22,19 +23,19 @@ public class BaseSqlBuilder {
 
     public String insert(BaseEntity obj){
         return new SQL(){{
-
+            INSERT_INTO(obj.getClass().getAnnotation(Column.class).name());
         }}.toString();
     }
 
     public String update(BaseEntity obj){
         return new SQL(){{
-
+            UPDATE(obj.getClass().getAnnotation(Column.class).name());
         }}.toString();
     }
 
     public String delete(BaseEntity obj){
         return new SQL(){{
-
+            DELETE_FROM(obj.getClass().getAnnotation(Column.class).name());
         }}.toString();
     }
 }
