@@ -30,12 +30,15 @@ public class BaseSqlBuilder {
     public String update(BaseEntity obj){
         return new SQL(){{
             UPDATE(obj.getClass().getAnnotation(Column.class).name());
+            SET("FIRST_NAME = #{firstName}");
+            WHERE("ID = #{id}");
         }}.toString();
     }
 
     public String delete(BaseEntity obj){
         return new SQL(){{
             DELETE_FROM(obj.getClass().getAnnotation(Column.class).name());
+            WHERE("ID = #{id}");
         }}.toString();
     }
 }
