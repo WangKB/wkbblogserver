@@ -24,6 +24,8 @@ public class BaseSqlBuilder {
     public String insert(BaseEntity obj){
         return new SQL(){{
             INSERT_INTO(obj.getClass().getAnnotation(Column.class).name());
+            VALUES("ID, FIRST_NAME", "#{id}, #{firstName}");
+            VALUES("LAST_NAME", "#{lastName}");
         }}.toString();
     }
 
